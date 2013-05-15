@@ -57,10 +57,6 @@ void StevenContactListener::stevenContactHill(b2Body* steven, b2Body* hill, cons
 	{
 		stevenSprite->fall();
 	}
-	else
-	{
-		stevenSprite->ski();
-	}
 }
 
 void StevenContactListener::stevenContactCoin(b2Body* steven, b2Body* coin, const b2Contact* contact )

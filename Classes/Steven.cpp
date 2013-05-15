@@ -140,13 +140,13 @@ b2Vec2 Steven::skiSpeed(b2Vec2 now)
 	switch (mStatus)
 	{
 	case StevenStatus::SS_Fall:
-		//CCLOG("fall");
-		return b2Vec2(0,0);
+		CCLOG("fall");
+		return b2Vec2(0-now.x,0);
 	case StevenStatus::SS_Ski:
-		//CCLOG("ski, %f", tanf(getRotation() *3.14 / 180) * 10.0f);
+		CCLOG("ski, %f", tanf(getRotation() *3.14 / 180) * 10.0f);
 		return b2Vec2(10-now.x, tanf(getRotation() *3.14 / 180) * 10 - now.y);
 	default:
-		//CCLOG("other");
+		CCLOG("other");
 		return b2Vec2(10 - now.x, 0);
 	}
 	
